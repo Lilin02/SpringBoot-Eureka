@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping("/get")
-    public String test(String name){
+    public String providerTest(String name){
         return name+"访问provider服务~~";
     }
 }

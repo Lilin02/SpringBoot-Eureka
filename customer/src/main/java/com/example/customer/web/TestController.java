@@ -1,6 +1,5 @@
 package com.example.customer.web;
 
-import com.example.customer.tool.RestTempLateTool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +21,7 @@ public class TestController {
     RestTemplate restTempLate;
 
     @GetMapping("/get")
-    public String test(String name){
+    public String customerTest(String name){
         return restTempLate.getForObject("http://eureka-demo-provider/provider/get?name="+name,String.class);
     }
 
